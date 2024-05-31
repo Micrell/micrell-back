@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Printf("Hello World")
+	projects := downloadGithub()
+
+	for _, p := range projects {
+		fmt.Println(p.String())
+	}
 }
